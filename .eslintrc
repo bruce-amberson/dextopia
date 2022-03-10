@@ -1,0 +1,152 @@
+{
+  "parser": "@babel/eslint-parser",
+  "env": {
+      "browser": true,
+      "node": true,
+      "mocha": true,
+      "es6": true
+  },
+  "globals": {
+      "expect": true,
+      "sinon": true,
+      "spy": true,
+      "stub": true,
+      "mount": true,
+      "render": true,
+      "shallow": true,
+      "nock": true,
+      "mockStore": true,
+      "wrapInMuiTheme": true,
+      "TEST_API_URL_BASE": true
+  },
+  "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended"
+  ],
+  "parserOptions": {
+      "ecmaFeatures": {
+          // "experimentalObjectRestSpread": true,
+          "jsx": true
+      },
+      "babelOptions": {
+        "presets": ["@babel/preset-react"]
+      },
+      "ecmaVersion": "latest",
+      "parser": "@babel/eslint-parser",
+      "sourceType": "module",
+      "requireConfigFile": false
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "plugins": [
+      "react"
+  ],
+  "rules": {
+      "indent": [
+        "error",
+        2,
+        { "SwitchCase": 1 }
+      ],
+      "quotes": ["error", "single"],
+      "semi": ["error", "always"],
+      "no-unused-vars": ["warn"],
+      "no-console": "warn",
+      "id-length": [
+        "error",
+        {
+          "min": 2,
+          "properties": "always",
+          "exceptions": ["e", "i", "_"]
+        }
+      ],
+      "no-var": "error",
+      "prefer-const": "warn",
+      "object-shorthand": ["error", "always"],
+      "array-callback-return": "error",
+      "prefer-template": "warn",
+      "template-curly-spacing": "warn",
+      "no-useless-escape": "warn",
+      "no-loop-func": "error",
+      "space-before-function-paren": ["warn", "never"],
+      "space-before-blocks": "warn",
+      "prefer-arrow-callback": "warn",
+      "no-useless-constructor": "warn",
+      "no-dupe-class-members": "error",
+      "dot-notation": "warn",
+      "no-undef": "error",
+      "one-var": [
+        "warn",
+        {
+          "initialized": "never",
+          "uninitialized": "always"
+        }
+      ],
+      "no-nested-ternary": "off",
+      "no-unneeded-ternary": "warn",
+      "no-mixed-operators": "warn",
+      "brace-style": ["warn", "stroustrup"],
+      "keyword-spacing": "warn",
+      "space-infix-ops": "warn",
+      "newline-per-chained-call": [
+        "warn",
+        {
+          "ignoreChainWithDepth": 2
+        }
+      ],
+      "comma-style": "warn",
+      "no-underscore-dangle": "error",
+      "jsx-quotes": ["warn", "prefer-single"],
+      "no-multi-spaces": "warn",
+      "object-curly-spacing": ["warn", "always"],
+      "space-in-parens": "warn",
+      "react/prop-types": [
+          "warn",
+          {
+              "ignore": [
+                  "children",
+                  "params",
+                  "router",
+                  "route",
+                  "history",
+                  "match"
+              ]
+          }
+      ],
+      "react/jsx-closing-bracket-location": [
+        "warn",
+        {
+          "nonEmpty": "tag-aligned",
+          "selfClosing": "tag-aligned"
+        }
+      ],
+      "react/jsx-tag-spacing": "warn",
+      "react/jsx-wrap-multilines": "error",
+      "react/self-closing-comp": "warn",
+      "react/jsx-no-bind": [
+        "error",
+        {
+          "allowArrowFunctions": true
+        }
+      ],
+      "react/sort-comp": [
+        "warn",
+        {
+          "order": [
+            "propTypes",
+            "state",
+            "defaultProps",
+            "componentDidMount",
+            "componentWillReceiveProps",
+            "shouldComponentUpdate",
+            "componentDidUpdate",
+            "componentWillUnmount",
+            "render",
+            "everything-else"
+          ]
+        }
+      ]
+  }
+}
